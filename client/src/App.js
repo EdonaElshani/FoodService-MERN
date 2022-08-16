@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CreateFood from './components/CreateFood';
+import Details from './components/Details';
+import DisplayAll from './components/DisplayAll';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import HomePage from './components/HomePage';
+import EditFood from './components/EditFood';
+import NotFound from './components/NotFound';
+import AboutUs from './components/AboutUs';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+    function App() {
+      return (
+        <div className="container">
+          <BrowserRouter>
+            <Navbar/>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/new" element={<CreateFood />} />
+              <Route path="/NotFound" element={<NotFound />} />
+              <Route path="/edit/:id" element={<EditFood />} />
+              <Route path="/details/:id" element={<Details />} />
+              <Route path="/about" element={<AboutUs />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+        </div>
+      );
+    }
+
 
 export default App;
