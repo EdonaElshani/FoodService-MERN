@@ -1,15 +1,16 @@
-import React from 'react'
-import Accordion from './Accordion'
-import Navbar from './Navbar'
-import Testimonials from './Testimonials'
+import React from "react";
+import Accordion from "./Accordion";
+import { HeroSection } from "./HeroSection";
+import Testimonials from "./Testimonials";
 
 const HomePage = () => {
   return (
-    <div>
-      <Testimonials/>
-      <Accordion/>
+    <div className="container">
+      <HeroSection />
+      <Testimonials />
+      <Accordion />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
