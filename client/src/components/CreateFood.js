@@ -145,7 +145,7 @@ const CreateFood = () => {
             {errors.price ? <span>{errors.price.message}</span> : null}
         </Form.Group>
         </Col>
-        <Button type="submit">Edit Food</Button>
+        <Button type="submit">Create Food</Button>
             </Col>
     </Form>
     </Col>
