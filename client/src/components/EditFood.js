@@ -64,8 +64,19 @@ const EditPet = () => {
             <input type='text' id='name' value={name} onChange={ e => setName(e.target.value)} />
            
             <label htmlFor='category'>Food Category:</label>
-            <input type='text' id='category' value={category} onChange={ e => setCategory(e.target.value)} />
-           
+            <select
+            value={category}
+            name="category"
+            onChange={(e) => setCategory(e.target.value)}>
+                <option>Select a Category</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Vegetarian">Vegetarian</option>
+            </select>
+
             <label htmlFor='description'>Description:</label>
             <input type='text' id='description' value={description} onChange={ e => setDescription(e.target.value)} />
 
