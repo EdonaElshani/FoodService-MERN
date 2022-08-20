@@ -11,7 +11,9 @@ const HomePage = () => {
       <Testimonials/>
       <Accordion/>
     </div>
-  )
-}
+    )
 
-export default HomePage
+};
+
+
+export default HomePage;

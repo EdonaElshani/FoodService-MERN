@@ -49,12 +49,12 @@ const Details = () => {
     <div>
       <h2>{name}</h2>
       <p>Category: {category}</p>
-      <img src={food.imgPath} alt={food.name} />
-      <p>Description: {food.description}</p>
-      <p>Calories: {food.calories}</p>
-      <p>Quantity: {food.quantity}</p>
-      <p>Price: {food.price}</p>
-      <button onClick={() => deleteFood(food._id) }>Order</button>
+      <img src={imgPath} alt={name} />
+      <p>Description: {description}</p>
+      <p>Calories: {calories}</p>
+      <p>Quantity: {quantity}</p>
+      <p>Price: {price}</p>
+      <button onClick={() => deleteFood(id) }>Order</button>
     </div>
   )
 }

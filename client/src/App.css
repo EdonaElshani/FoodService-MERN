@@ -7,7 +7,7 @@ body {
 	font-weight: 300;
 	text-align: center;
 	position: relative;
-	margin: 30px 0 60px;
+	margin: 40px 0 40px;
 }
 .testimonial-header::after {
 	content: "";
@@ -102,3 +102,29 @@ body {
 	border-bottom: solid 2px #1abc9c;
 	transition: all 0.2s ease;
 }
+.carousel-Section{
+	background-color: #555553;
+}
+.carousel-Section img{
+	height: 70vh;
+	object-fit:scale-down;
+	filter: brightness(35%);
+}
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+  }
+  @keyframes slideInDown {
+	from {
+	  transform: translate3d(0, -100%, 0);
+	  visibility: visible;
+	}
+  
+	to {
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+  
+  .slideInDown {
+	animation-name: slideInDown;
+  }
