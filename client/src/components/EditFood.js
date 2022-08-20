@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 // import {FaPencilAlt} from "react-icons/fa"
 // import './EditPet.css';
 
-const EditPet = () => {
+const EditFood = () => {
     const [name, setName] = useState('');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
@@ -21,11 +21,11 @@ const EditPet = () => {
           .then((res) => {
             setName(res.data.name);
             setCategory(res.data.category);
-            setDescription(res.data.description)
-            setQuantity(res.data.quantity)
-            setCalories(res.data.calories)
-            setImgPath(res.data.imgPath)
-            setPrice(res.data.price)
+            setDescription(res.data.description);
+            setQuantity(res.data.quantity);
+            setCalories(res.data.calories);
+            setImgPath(res.data.imgPath);
+            setPrice(res.data.price);
           })
           .catch((err) =>{
             
@@ -33,6 +33,7 @@ const EditPet = () => {
        
           });
       }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
@@ -45,6 +46,7 @@ const EditPet = () => {
         price,
       })
       .then((res) => {
+        console.log(res.data);
         navigate('/');
       })
       .catch((err) =>{
@@ -88,11 +90,11 @@ const EditPet = () => {
 
             <label htmlFor='price'>Price:</label>
             <input type='number' id='price' value={price} onChange={ e => setPrice(e.target.value)} />
-            <button>Update Movie</button>
+            <button>Update Order</button>
           </div>
         </form>
     </div>
   )
 }
 
-export default EditPet
+export default EditFood

@@ -32,7 +32,7 @@ const Details = () => {
         setFood(res.data);
       })
       .catch((err) => console.log('GET FOOD BY ID ERROR', err));
-  }, []);
+  }, [id]);
 
   const deleteFood = (id) => {
     axios
