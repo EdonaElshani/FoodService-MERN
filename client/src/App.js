@@ -10,6 +10,7 @@ import HomePage from './components/HomePage';
 import EditFood from './components/EditFood';
 import NotFound from './components/NotFound';
 import AboutUs from './components/AboutUs';
+import DisplayAllFood from './components/DisplayAllFood';
 
 
     function App() {
@@ -24,6 +25,7 @@ import AboutUs from './components/AboutUs';
               <Route path="/edit/:id" element={<EditFood />} />
               <Route path="/details/:id" element={<Details />} />
               <Route path="/about" element={<AboutUs />} />
+              <Route path="/allFood" element={<DisplayAllFood />} />
             </Routes>
             <Footer />
           </BrowserRouter>
