@@ -128,3 +128,35 @@ body {
   .slideInDown {
 	animation-name: slideInDown;
   }
+  .aboutUs{
+	background-image: url("./components/Images/aboutUs.jpg");
+	min-height: 140vh;
+	background-repeat: no-repeat;
+	margin: auto;
+  }
+  .first-Paragraph{
+	width: 45vw;
+	padding: 26.5rem 0 0 17rem;
+	font-style: italic;
+  }
+  .card-One, .card-Three{
+	background-color: #F8D7D0;
+  }
+  .card-Two{
+	background-color: #8ee9d7;
+  }
+  .card-One, .card-Three, .card-Two{
+	width: 18rem;
+	min-height: 25vh;
+  }
+  ion-icon {
+	font-size: 1.2em;
+	color: #000;
+	padding-right: .5em;
+  }
+  .card ion-icon{
+	font-size: 2rem;
+  }
+  footer h6{
+	color: #1abc9c;
+  }
