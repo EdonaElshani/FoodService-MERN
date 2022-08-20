@@ -28,7 +28,7 @@ const DisplayAllFood = () => {
                   <img src={food.imgPath} alt={food.name} />
                   </div>
                   <div className="preview-card__content">
-                    <span className="preview-card__code">26 December 2019</span>
+                    <span className="preview-card__code">20 September 2022</span>
                     <div className="preview-card__title">{food.name}</div>
                     <div className="preview-card__text">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
