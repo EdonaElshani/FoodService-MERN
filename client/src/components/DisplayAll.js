@@ -15,9 +15,12 @@ const DisplayAll = () => {
   }, []);
 
   return (
-    <div className='container'>
-      {foods.map((food) => (
-        <div key={food._id} className="card">
+    <div>
+      {foods.map((food) => {
+        return (
+        
+
+          <div key={food._id} className="card">
           <h2>{food.name}</h2>
           <img style={{width: "30px"}}  src={food.imgPath} alt={food.name} />
           <br />
@@ -26,7 +29,9 @@ const DisplayAll = () => {
           <Link to={`/edit/${food._id}`}>Update</Link>
           <br />
         </div>
-      ))}
+       
+          )
+        })}
     </div>
   )
 }

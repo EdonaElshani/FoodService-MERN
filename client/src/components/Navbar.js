@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import "../form.css"
 
 const Navbar = () => {
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
           <NavLink to="/about" className="nav-link fw-semibold">About</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link fw-semibold" href="#">How it works</a>
+          <a className="nav-link fw-semibold" href="#howItWorks">How it works</a>
         </li>
         <li className="nav-item">
         <NavLink to="/new" className="nav-link fw-semibold">Add Order</NavLink>
@@ -26,7 +27,7 @@ const Navbar = () => {
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn--green btn--green:hover" type="submit">Search</button>
       </form>
     </div>
   </div>

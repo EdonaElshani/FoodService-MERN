@@ -1,4 +1,5 @@
 import './App.css';
+import './form.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreateFood from './components/CreateFood';
 import Details from './components/Details';
