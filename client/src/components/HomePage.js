@@ -8,7 +8,7 @@ import DisplayAll from "./DisplayAll"
 const HomePage = () => {
   return (
     <div className="container">
-      <DisplayAll />
+      {/* <DisplayAll /> */}
       <HeroSection />
       <HowItWorks/>
       <Testimonials />
