@@ -24,7 +24,7 @@ const FoodSchema = {
     minLength: [3, "Description must be at least 3 characters"],
   },
   quantity: {
-    type: String,
+    type: Number,
     required: [true, "Quantity is required"],
   },
 calories: {
