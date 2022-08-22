@@ -15,6 +15,7 @@ const EditFood = () => {
     // const [errors, setErrors] = useState("");
     const {id} = useParams();
     const navigate = useNavigate();
+
     useEffect(() => {
         axios
           .get(`http://localhost:8000/api/food/${id}`)
@@ -33,7 +34,7 @@ const EditFood = () => {
           })
           .catch((err) =>{
             
-        // console.log(err.response.data.errors.name.message);
+        console.log(err.response.data.errors.name.message);
        
           });
       }, []);
@@ -51,12 +52,14 @@ const EditFood = () => {
       })
       .then((res) => {
         console.log(res.data);
+        // setFood(res.data)
         navigate('/');
       })
-      .catch((err) =>{
+      .catch((err) =>
         console.log("ERROR", err.response.data.message)
-      });
-    }
+      );
+    };
+    
   return (
     <div>
 

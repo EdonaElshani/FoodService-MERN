@@ -8,7 +8,7 @@ const DisplayAllFood = () => {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/food")
+      .get('http://localhost:8000/api/food')
       .then((res) => {
         console.log(res.data);
         setFoods(res.data);
@@ -34,7 +34,7 @@ const DisplayAllFood = () => {
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Recusandae voluptate repellendus magni illo ea animi?
                     </div>
-                    <Link to={`/edit/${food._id}`} className="preview-card__button">Edit Order</Link>
+                    <Link to={`food/edit/${food._id}`} className="preview-card__button">Edit Order</Link>
                   </div>
                 </div>
               </div>

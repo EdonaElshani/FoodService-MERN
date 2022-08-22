@@ -18,8 +18,6 @@ const DisplayAll = () => {
     <div>
       {foods.map((food) => {
         return (
-        
-
           <div key={food._id} className="card">
           <h2>{food.name}</h2>
           <img style={{width: "30px"}}  src={food.imgPath} alt={food.name} />

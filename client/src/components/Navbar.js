@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink to="/new" className="nav-link fw-semibold">Add Order</NavLink>
         </li>
         <li className="nav-item">
-        <NavLink to="/allFood" className="nav-link fw-semibold">List of All Orders</NavLink>
+        <NavLink to="/allFood" className="nav-link fw-semibold">Orders</NavLink>
         </li>
       </ul>
       <form className="d-flex" role="search">
