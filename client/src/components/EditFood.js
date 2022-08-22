@@ -21,6 +21,11 @@ const EditFood = () => {
           .then((res) => {
             setName(res.data.name);
             setCategory(res.data.category);
+            setDescription(res.data.description);
+            setQuantity(res.data.quantity);
+            setCalories(res.data.calories);
+            // setImgPath(res.data.imgPath);
+            setPrice(res.data.price);
             setDescription(res.data.description)
             setQuantity(res.data.quantity)
             setCalories(res.data.calories)
@@ -32,6 +37,7 @@ const EditFood = () => {
        
           });
       }, []);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
@@ -44,6 +50,7 @@ const EditFood = () => {
         price,
       })
       .then((res) => {
+        console.log(res.data);
         navigate('/');
       })
       .catch((err) =>{
@@ -85,7 +92,7 @@ const EditFood = () => {
 
             <label htmlFor='price'>Price:</label>
             <input type='number' id='price' value={price} onChange={ e => setPrice(e.target.value)} />
-            <button>Update Movie</button>
+            <button>Update Order</button>
           </div>
         </form> */}
         <body>
