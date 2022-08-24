@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import "../detailStyle.css"
+import io from 'socket.io-client'
 
 
 const Details = () => {
   const [food, setFood] = useState({});
+  const [socket] = useState(() => io(":8000"));
 
   const [name, setName] = useState('');
   const [category, setCategory] = useState('');
@@ -19,6 +21,9 @@ const Details = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    socket.on("connect", (data) => {
+      console.log(data);
+    });
     axios
       .get(`http://localhost:8000/api/food/${id}`)
       .then((res) => {
@@ -32,20 +37,29 @@ const Details = () => {
         setPrice(res.data.price)
         // console.log(res.data.name)
         setFood(res.data);
-      })
+      }) 
       .catch((err) => console.log('GET FOOD BY ID ERROR', err));
+
+      return () => socket.disconnect(true);
   }, [id]);
 
   const deleteFood = (id) => {
-    axios
-      .delete(`http://localhost:8000/api/food/${id}`)
-      .then((res) => {
-        console.log(res.data);
-        // setFood(food.filter((food, index) => food._id !== id));
-        navigate('/');
-      })
-      .catch((err) => console.log(err));
+    // axios
+    //   .delete(`http://localhost:8000/api/food/${id}`)
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     // setFood(food.filter((food, index) => food._id !== id));
+    //     navigate('/');
+    //   })
+    //   .catch((err) => console.log(err));
+    socket.emit("deletedFood", id);
+    navigate("/");
   };
+  socket.on("foodDeleted", (deletedId) => {
+  console.log("Filtering", deletedId);
+  setFood(food.filter((food) => food._id !== deletedId));
+});
+
 
   return (
     <div>
