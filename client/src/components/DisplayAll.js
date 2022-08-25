@@ -19,7 +19,6 @@ const DisplayAll = () => {
       .delete(`http://localhost:8000/api/food/${id}`)
       .then((res) => {
         console.log(res.data);
-        // setFood(food.filter((food, index) => food._id !== id));
         navigate('/');
       })
       .catch((err) => console.log(err));

@@ -34,7 +34,7 @@ export const HeroSection = () => {
                         href=""
                       >
                         Order Now
-                        <div className="d-inline-flex btn-sm-square  text-white rounded-circle ms-2">
+                        <div className="d-inline-flex btn-sm-square rounded-circle ms-2">
                           <i className="fa fa-arrow-right"></i>
                         </div>
                       </a>
@@ -82,7 +82,7 @@ export const HeroSection = () => {
                         480 calories, 38 grams carbohydrate
                       </p>
                       <a
-                        className="btn btn-success py-2 px-3 animated slideInDown"
+                        className="btn btn-success py-2 px-3 animated slideInDown text-white"
                         href=""
                       >
                         Order Now

@@ -52,8 +52,7 @@ const EditFood = () => {
       })
       .then((res) => {
         console.log(res.data);
-        // setFood(res.data)
-        navigate('/');
+        navigate('/allFood');
       })
       .catch((err) =>
         console.log("ERROR", err.response.data.message)

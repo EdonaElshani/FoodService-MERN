@@ -53,7 +53,7 @@ const Details = () => {
     //   })
     //   .catch((err) => console.log(err));
     socket.emit("deletedFood", id);
-    navigate("/");
+    navigate("/allFood");
   };
   socket.on("foodDeleted", (deletedId) => {
   console.log("Filtering", deletedId);
