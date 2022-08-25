@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const FoodSchema = {
+const FoodSchema = mongoose.Schema(
+  {
   name: {
     type: String,
     required: [true, "Name is required"],
@@ -24,7 +25,7 @@ const FoodSchema = {
     minLength: [3, "Description must be at least 3 characters"],
   },
   quantity: {
-    type: String,
+    type: Number,
     required: [true, "Quantity is required"],
   },
 calories: {
@@ -45,7 +46,12 @@ calories: {
     type: Number,
     required: [true, "Price is required"],
     min: [0, "Price cannot be negative"],
-  },
-};
+  }
+},
+
+      {
+    timestamps: true,
+}
+);
 
 module.exports = mongoose.model("Food", FoodSchema);

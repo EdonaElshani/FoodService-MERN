@@ -14,6 +14,18 @@ const DisplayAll = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const deleteFood = (id) => {
+    axios
+      .delete(`http://localhost:8000/api/food/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        // setFood(food.filter((food, index) => food._id !== id));
+        navigate('/');
+      })
+      .catch((err) => console.log(err));
+  };
+
+
   return (
     <div>
       {foods.map((food) => {
@@ -25,11 +37,15 @@ const DisplayAll = () => {
           <Link to={`/details/${food._id}`}>Details</Link>
           <span> | </span>
           <Link to={`/edit/${food._id}`}>Update</Link>
+          <span> | </span>
           <br />
+          <button className="btn btn--radius btn--green" type="submit"
+                            onClick={() => deleteFood(id) }>Order</button>
+                            <h1>JSJSJSJ</h1>
         </div>
        
-          )
-        })}
+       )
+      })}
     </div>
   )
 }

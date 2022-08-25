@@ -3,7 +3,6 @@ import './form.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreateFood from './components/CreateFood';
 import Details from './components/Details';
-import DisplayAll from './components/DisplayAll';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';

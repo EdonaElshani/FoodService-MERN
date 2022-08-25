@@ -40,7 +40,7 @@ const getOneFood = (req, res) =>{
 }
 /*Update/EDIT Food */
 const updateFood = (req, res) => {
-    Food.findOneAndUpdate({ id: req.params.id },req.body, {
+    Food.findOneAndUpdate({ _id: req.params.id },req.body, {
             new: true,
             runValidators: true
     })
@@ -57,7 +57,7 @@ const updateFood = (req, res) => {
 const deleteFood = (req, res) => {
     Food.deleteOne({ _id: req.params.id })
     .then((deletedFood) => {
-        res.json({ deletedFood });
+        res.json({deletedFood});
     })
     .catch((err) => {
         res.status(400).json({ err });

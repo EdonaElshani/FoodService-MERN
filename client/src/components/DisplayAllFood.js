@@ -15,7 +15,10 @@ const DisplayAllFood = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
+  var currentdate = new Date();
+  var datetime = "Last Sync: " + currentdate.getDate() + "/"
+  + (currentdate.getMonth()+1)  + "/" 
+  + currentdate.getFullYear();
   return (
     <div>
       <div className="container">
@@ -28,13 +31,18 @@ const DisplayAllFood = () => {
                   <img src={food.imgPath} alt={food.name} />
                   </div>
                   <div className="preview-card__content">
-                    <span className="preview-card__code">20 September 2022</span>
+                    <span className="preview-card__code">{datetime}</span>
                     <div className="preview-card__title">{food.name}</div>
                     <div className="preview-card__text">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Recusandae voluptate repellendus magni illo ea animi?
                     </div>
-                    <Link to={`food/edit/${food._id}`} className="preview-card__button">Edit Order</Link>
+
+                    {/* <Link to={`/edit/${food._id}`} className="preview-card__button">Edit Order</Link> */}
+
+                    <Link to={`/edit/${food._id}`} className="preview-card__button">Edit</Link>
+                    <Link to={`/details/${food._id}`} className="preview-card__button">Details</Link>
+
                   </div>
                 </div>
               </div>
