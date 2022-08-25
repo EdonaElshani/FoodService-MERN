@@ -55,7 +55,10 @@ const EditFood = () => {
         navigate('/allFood');
       })
       .catch((err) =>
-        console.log("ERROR", err.response.data.message)
+      {
+        console.log("ERROR", err.response.data.message);
+        setErrors(err.response.data.err.errors);
+      }
       );
     };
     //     const deleteFood = (id) => { 
